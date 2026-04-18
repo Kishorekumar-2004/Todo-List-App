@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Header -->
+    <div class="header">
+      <h1>My Tasks</h1>
+      <div class="stats">
+        <span id="total-count">0 tasks</span>
+        <span class="dot">·</span>
+        <span id="done-count">0 done</span>
+      </div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <!-- Task List -->
+    <ul class="task-list" id="task-list">
+      <!-- tasks render here -->
+    </ul>
+
+    <!-- Empty State -->
+    <div class="empty-state" id="empty-state">
+      <div class="empty-icon">✓</div>
+      <p>No tasks yet. Add one below!</p>
+    </div>
+
+    <!-- Add Task Input -->
+    <div class="add-bar">
+      <input
+        type="text"
+        id="task-input"
+        placeholder="Add a new task..."
+        maxlength="120"
+        autocomplete="off"
+      />
+      <button id="add-btn" onclick="addTask()">Add</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
